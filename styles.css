@@ -1,0 +1,168 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.container {
+  background-color: var(--dark-blue);
+  height: 380px;
+  border-radius: 25px;
+  padding: 25px;
+  width: 350px;
+  max-width: 100%;
+  align-items: center;
+}
+
+.container .header-img {
+  color: var(--orange);
+  background-color: var(--very-dark-blue);
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.rating-content h2 {
+  padding: 20px 0;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
+
+.rating .rate {
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+  border-radius: 50%;
+  height: 15px;
+  width: 20px;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+}
+
+.rating .rate:hover {
+  background-color: var(--orange);
+  opacity: 1;
+}
+
+.rating .active {
+  background-color: var(--light-grey);
+}
+
+button {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 20px;
+  border: none;
+  padding: 13px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+/* Thanks section */
+.container .thank-you-img {
+  text-align: center;
+}
+
+.container .selected p {
+  left: 50px;
+  width: 180px;
+  margin-top: 20px;
+  margin-left: 60px;
+  padding: 2px 10px;
+  color: var(--orange);
+  background-color: var(--very-dark-blue);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.container .thank-you-content {
+  text-align: center;
+}
+
+.thank-you-content h2 {
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    justify-items: center;
+  }
+
+  .container {
+    overflow-x: hidden;
+    height: 350px;
+    width: 300px;
+    padding: 10px;
+  }
+
+  .rating-content h2 {
+    padding: 20px 0;
+  }
+
+  .rating .rate {
+    padding: 25px 20px;
+    margin: 0 5px;
+  }
+  .container .thank-you-img {
+    padding-top: 10px;
+  }
+  .container .selected p {
+    margin-left: 70px;
+  }
+
+  .thank-you-content h2 {
+    padding: 20px 0;
+  }
+}
